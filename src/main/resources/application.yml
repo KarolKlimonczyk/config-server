@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: JvmfyConfigServer
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_CONFIG_SERVER}
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+
+server:
+  port: 8012
