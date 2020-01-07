@@ -9,6 +9,7 @@ spring:
           uri: ${GIT_CONFIG_SERVER}
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
+          clone-on-start: true
 
 server:
   port: 8012
