@@ -6,8 +6,8 @@ spring:
     config:
       server:
         git:
-          uri: ${GIT_CONFIG_SERVER}
-          username: ${GIT_USER}
+          uri: ${GIT_CONFIG_FILE_URL}
+          username: ${GIT_LOGIN}
           password: ${GIT_PASSWORD}
           clone-on-start: true
 
