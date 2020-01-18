@@ -11,5 +11,17 @@ spring:
           password: ${GIT_PASSWORD}
           clone-on-start: true
 
+  rabbitmq: #hit the /actuator/bus-refresh (post) url to emit new property
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 server:
   port: 8012
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
