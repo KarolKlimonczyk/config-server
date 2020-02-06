@@ -1,6 +1,8 @@
 spring:
   application:
-    name: JvmfyConfigServer
+    name: jvmfy-config-server
+  profiles:
+    active: native
 
   cloud:
     config:
@@ -10,6 +12,9 @@ spring:
           username: ${GIT_LOGIN}
           password: ${GIT_PASSWORD}
           clone-on-start: true
+
+        native:
+          search-locations: classpath:config/
 
   rabbitmq: #hit the /actuator/bus-refresh (post) url to emit new property
     host: localhost
